@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+@include breakpoint-md {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    width: 100%;
+    max-width: $layout-base-width;
+    @include margin(x, auto);
+  }
+}
