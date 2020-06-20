@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.page {
+  &__inner {
+    @include padding(x, 1rem);
+    @include padding(y, 4rem);
+  }
+  &__heading {
+    @include margin(top, 0);
+    @include margin(bottom, 4rem);
+  }
+}
+
+@include breakpoint-md {
+  .page {
+    grid-column: 1 / 13;
+  }
+}
