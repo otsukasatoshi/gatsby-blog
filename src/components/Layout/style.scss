@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  @include flexbox();
+  @include flex-flow(column);
+}
+
+main {
+  @include flex(1);
+}
