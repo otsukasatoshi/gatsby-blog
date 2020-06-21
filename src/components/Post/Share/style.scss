@@ -1,0 +1,29 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.share-list {
+  &__inner {
+    @include flexbox();
+    @include justify-content(space-around);
+    @include align-items(center);
+    @include margin(top, 3rem);
+  }
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  a {
+    display: block;
+    @include link-color($black);
+  }
+  svg {
+    @include vertical-element;
+  }
+}
+
+@include breakpoint-lg {
+  .share-list {
+    grid-column: 1 / 8;
+    grid-row: 5 / 6;
+  }
+}
