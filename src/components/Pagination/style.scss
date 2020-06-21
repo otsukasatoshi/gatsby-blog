@@ -1,0 +1,34 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.pagination {
+  @include margin(top, 4rem);
+  @include font-size(14);
+  @include flexbox();
+  @include justify-content(space-between);
+  @include align-items(center);
+  li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+  a {
+    display: inline-block;
+    @include padding(all, 0.5rem);
+    @include border(all, 0.0625rem, solid, $gray);
+    @include border-radius(all, null, 0.25rem);
+  }
+}
+
+@include breakpoint-lg {
+  .pagination {
+    max-width: $layout-base-width;
+    @include margin(x, auto);
+  }
+}
