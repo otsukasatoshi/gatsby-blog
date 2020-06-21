@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+  height: 4rem;
+  background-color: $white;
+  @include box-shadow(0, 0.25rem, 0.75rem, $whitesmoke);
+  @include vertical-element();
+  &__inner {
+    width: 100%;
+    @include padding(x, 1rem);
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+  &__logo {
+    @include font-size(28);
+    @include margin(bottom, 0);
+  }
+}
+
+@include breakpoint-lg {
+  .header {
+    &__inner {
+      max-width: $layout-base-width;
+    }
+    &__logo {
+      @include font-size(32);
+    }
+  }
+}
