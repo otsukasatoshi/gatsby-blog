@@ -1,0 +1,51 @@
+@mixin flexbox() {
+  display: flex;
+}
+
+@mixin flex-direction($direction) {
+  flex-direction: $direction;
+}
+
+@mixin flex-wrap($wrap) {
+  flex-wrap: $wrap;
+}
+
+@mixin flex-flow($flow) {
+  flex-flow: $flow;
+}
+
+@mixin justify-content($justify) {
+  justify-content: $justify;
+}
+
+@mixin align-items($align) {
+  align-items: $align;
+}
+
+@mixin align-content($align) {
+  align-content: $align;
+}
+
+@mixin order($value) {
+  order: $value;
+}
+
+@mixin flex-grow($grow) {
+  flex-grow: $grow;
+}
+
+@mixin flex-shrink($shrink) {
+  flex-shrink: $shrink;
+}
+
+@mixin flex-basis($basis) {
+  flex-basis: $basis;
+}
+
+@mixin flex($value) {
+  flex: $value;
+}
+
+@mixin align-self($align) {
+  align-self: $align;
+}

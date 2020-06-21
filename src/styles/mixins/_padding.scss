@@ -1,0 +1,25 @@
+@mixin padding($direction: null, $size: null) {
+  @if $direction == all {
+    padding: $size;
+  }
+  @else if $direction == left {
+    padding-left: $size;
+  }
+  @else if $direction == right {
+    padding-right: $size;
+  }
+  @else if $direction == top {
+    padding-top: $size;
+  }
+  @else if $direction == bottom {
+    padding-bottom: $size;
+  }
+  @else if $direction == x {
+    padding-left: $size;
+    padding-right: $size;
+  }
+  @else if $direction == y {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+}
