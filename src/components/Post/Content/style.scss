@@ -1,0 +1,76 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.post-content {
+  p {
+    text-align: justify;
+    word-wrap: break-word;
+    @include line-height(2);
+  }
+  a {
+    text-decoration: underline;
+  }
+  ul {
+    @include margin(bottom, 1.5rem);
+    li {
+      list-style-type: disc;
+      @include margin(left, 1.5rem);
+    }
+  }
+  ol {
+    @include margin(bottom, 1.5rem);
+    li {
+      list-style-type: decimal;
+      @include margin(left, 1.5rem);
+    }
+  }
+  table {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    tr {
+      background-color: $white;
+      @include border(all, 0.0625rem, solid, $lightgray);
+      &:nth-child(2n) {
+        background-color: $whitesmoke;
+      }
+      th {
+        font-weight: bold;
+        @include border(all, 0.0625rem, solid, $lightgray);
+        @include padding(x, 1rem);
+        @include padding(y, 0.5rem);
+      }
+      td {
+        @include border(all, 0.0625rem, solid, $lightgray);
+        @include padding(x, 1rem);
+        @include padding(y, 0.5rem);
+      }
+    }
+  }
+  blockquote {
+    color: $gray;
+    @include border(left, 0.25rem, solid, $lightgray);
+    @include margin(x, 1rem);
+    @include padding(x, 1rem);
+    &:first-child {
+      @include margin(top, 0);
+    }
+    &:last-child {
+      @include margin(bottom, 0);
+    }
+  }
+  hr {
+    background-color: $lightgray;
+    height: 0.25rem;
+    border: 0 none;
+  }
+}
+
+
+@include breakpoint-lg {
+  .post-content {
+    grid-column: 1 / 8;
+    grid-row: 2 / 3;
+  }
+}
