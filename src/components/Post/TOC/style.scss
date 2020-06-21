@@ -1,0 +1,41 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.toc {
+  display: none;
+}
+
+@include breakpoint-lg {
+  .toc {
+    display: block;
+    grid-column: 10 / 13;
+    grid-row: 2 / 5;
+    &__inner {
+      position: sticky;
+      top: 8rem;
+    }
+    h2 {
+      @include font-size(18);
+      @include margin(top, 0);
+    }
+    &__items {
+      max-height: 24rem;
+      overflow: scroll;
+      a {
+        display: inline-block;
+        color: $darkgray;
+        @include font-size(14);
+        @include margin(bottom, 0.5rem);
+        @include padding(left, 1rem);
+        &:hover {
+          color: $black;
+          text-decoration: underline;
+        }
+        &.active {
+          color: $black;
+          @include border(left, 0.0625rem, solid, $black);
+        }
+      }
+    }
+  }
+}
