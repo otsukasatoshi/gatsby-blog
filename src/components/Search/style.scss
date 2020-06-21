@@ -1,0 +1,66 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.result {
+  &__inner {
+    background-color: white;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    @include border(all, 0.0625rem, solid, $lightgray);
+    @include font-size(16);
+  }
+  &-active {
+    visibility: visible;
+    position: relative;
+    & .result__inner {
+      visibility: visible;
+      opacity: 1;
+      width: 100%;
+      height: 12rem;
+      overflow: scroll;
+      max-width: 100%;
+    }
+  }
+  &__count {
+    background-color: $black;
+    color: $whitesmoke;
+    @include padding(all, 0.5rem);
+    @include font-size(14);
+  }
+  &__lists {
+    li {
+      @include border(top, 0.0625rem, solid, $lightgray);
+      @include padding(all, 0.5rem);
+      @include font-size(14);
+    }
+  }
+}
+
+.search {
+  &__wrapper {
+    position: relative;
+  }
+  &__form {
+    width: 100%;
+    border: none;
+    background-color: $whitesmoke;
+    @include padding(all, 0.25rem 0.25rem 0.25rem 2rem);
+    @include border-radius(all, null, 0.125rem);
+    @include font-size(16);
+    &:focus {
+      outline: none;
+      @include border(all, 0.0625rem, solid, $darkgray);
+    }
+  }
+  &__icon {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $gray;
+  }
+}
