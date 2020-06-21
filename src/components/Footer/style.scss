@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.footer {
+  height: 4rem;
+  background-color: $white;
+  @include border(top, 0.0625rem, solid, $lightgray);
+  @include vertical-element();
+  &__inner {
+    width: 100%;
+    text-align: center;
+    @include padding(x, 1rem);
+  }
+  &__copyright {
+    color: $black;
+    @include font-size(18);
+  }
+}
+
+@include breakpoint-lg {
+  .footer {
+    &__inner {
+      max-width: $layout-base-width;
+    }
+  }
+}
