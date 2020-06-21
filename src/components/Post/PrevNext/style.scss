@@ -1,0 +1,31 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.prev-next {
+  @include margin(top, 3rem);
+  li {
+    &:first-child {
+      text-align: left;
+      @include margin(bottom, 1.5rem);
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+  span {
+    display: block;
+  }
+}
+
+@include breakpoint-lg {
+  .prev-next {
+    grid-column: 1 / 8;
+    grid-row: 7 / 8;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    li:first-child {
+      @include margin(bottom, 0);
+    }
+  }
+}
