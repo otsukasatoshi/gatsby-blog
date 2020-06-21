@@ -1,0 +1,22 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.post-category {
+  @include margin(top, 3rem);
+  @include font-size(14);
+  background-color: white;
+  a {
+    display: inline-block;
+    color: $darkgray;
+    @include border(all, 0.0625rem, solid, $lightgray);
+    @include padding(all, 0.25rem 0.5rem);
+    @include border-radius(all, null, 0.125rem);
+  }
+}
+
+@include breakpoint-lg {
+  .post-category {
+    grid-column: 1 / 8;
+    grid-row: 3 / 4;
+  }
+}
