@@ -1,0 +1,23 @@
+// bese colors
+$white: hsl(0, 0%, 100%);
+$whitesmoke: hsl(0, 0%, 95%);
+$lightgray: hsl(0, 0%, 90%);
+$gray: hsl(0, 0%, 50%);
+$darkgray: hsl(0, 0%, 40%);
+$black: hsl(0, 0%, 15%);
+
+// syntax colors
+$syntax-red: hsl(0, 95.1%, 68%);
+$syntax-purple: hsl(261.5, 100%, 76.5%);
+$syntax-green: hsl(94.5, 63.1%, 67.1%);
+$syntax-orange: hsl(43.2, 100%, 70.6%);
+$syntax-coral: hsl(32.4, 98.2%, 55.7%);
+$syntax-cyan: hsl(189.6, 81.1%, 66.9%);
+
+// layout
+$layout-base-width: 1120px;
+$layout-single-post-width: 680px;
+$layout-breakpoint-sm: 576px;
+$layout-breakpoint-md: 768px;
+$layout-breakpoint-lg: 992px;
+$layout-breakpoint-xl: 1200px;
