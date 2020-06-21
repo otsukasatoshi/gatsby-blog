@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.post {
+  @include padding(x, 1rem);
+  @include padding(y, 4rem);
+}
+
+@include breakpoint-md {
+  .post {
+    @include margin(x, auto);
+  }
+}
+
+@include breakpoint-lg {
+  .post {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    max-width: $layout-base-width;
+  }
+}
