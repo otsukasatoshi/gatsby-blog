@@ -1,0 +1,42 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-feature-settings: "palt";
+  font-kerning: normal;
+  text-size-adjust: 100%;
+  @include letter-spacing(0.0625);
+}
+
+a {
+  text-decoration: none;
+  @include link-color($black);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul, li {
+  list-style-type: none;
+  @include margin(all, 0);
+  @include padding(all, 0);
+}
+
+ol, li {
+  list-style-type: none;
+  @include margin(all, 0);
+  @include padding(all, 0);
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  @include margin(all, 0);
+  @include padding(all, 0);
+}
