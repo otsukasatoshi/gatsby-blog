@@ -1,0 +1,45 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.post-header {
+  @include margin(bottom, 4rem);
+  &__meta {
+    h1 {
+      @include margin(bottom, 1.5rem);
+      @include font-size(24);
+    }
+    p {
+      color: $darkgray;
+      @include margin(bottom, 1.5rem);
+    }
+  }
+  &__img {
+    overflow: hidden;
+  }
+}
+
+@include breakpoint-lg {
+  .post-header {
+    grid-column: 1 / 13;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    @include align-items(center);
+    &__meta {
+      grid-column: 1 / 7;
+      h1 {
+        @include font-size(28);
+      }
+    }
+    &__img {
+      grid-column: 7 / 13;
+    }
+  }
+}
+
+@include breakpoint-xl {
+  .post-header {
+    min-height: 48vh;
+  }
+}
