@@ -1,0 +1,28 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.post-tags {
+  @include margin(top, 1.5rem);
+  @include font-size(14);
+  @include flexbox();
+  @include align-items(center);
+  @include flex-wrap(wrap);
+  li {
+    display: inline-block;
+    @include margin(all, 0 1rem 1rem 0);
+  }
+  a {
+    display: inline-block;
+    background-color: $whitesmoke;
+    color: $darkgray;
+    @include padding(all, 0.25rem 0.5rem);
+    @include border-radius(all, null, 0.125rem);
+  }
+}
+
+@include breakpoint-lg {
+  .post-tags {
+    grid-column: 1 / 8;
+    grid-row: 4 / 5;
+  }
+}
