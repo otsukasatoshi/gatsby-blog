@@ -6,13 +6,18 @@ import Grid from '../components/Grid';
 import Page from '../components/Page';
 import Posts from '../components/Posts';
 import Pagination from '../components/Pagination';
+import Label from '../../config/site-labels';
 
 const BlogTagsTemplate = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges;
   const { tag, currentPage, totalPage, isFirst, isLast, prevPage, nextPage } = pageContext;
+  const pageTitle = `${tag}${Label.articles}`;
   return (
     <Layout>
-      <SEO title={tag} />
+      <SEO
+        title={pageTitle}
+        description={pageTitle}
+        />
       <Grid>
         <Page title={tag}>
           <Posts posts={posts} />

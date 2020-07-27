@@ -5,5 +5,6 @@ module.exports = {
   next: '次へ',
   toc: 'Table Of Contents',
   searchLabel: 'search',
-  searchResult: '検索結果'
+  searchResult: '検索結果',
+  articles: 'の記事一覧'
 };
