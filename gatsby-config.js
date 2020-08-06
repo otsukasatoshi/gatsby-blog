@@ -149,7 +149,6 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-sass',
@@ -170,8 +169,12 @@ module.exports = {
         theme_color: '#fff',
         display: 'minimal-ui',
         icon: 'content/assets/favicon.png',
+        icon_options: {
+          purpose: 'maskable',
+        },
       },
     },
+    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-typography',
