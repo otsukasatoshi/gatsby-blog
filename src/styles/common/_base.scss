@@ -40,3 +40,7 @@ figure {
   @include margin(all, 0);
   @include padding(all, 0);
 }
+
+.iframely-embed {
+  @include margin(bottom, 1.5rem);
+}

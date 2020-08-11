@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Iframely from '../components/Iframely';
 import Post from '../components/Post';
 import { useSiteMetadata } from '../hooks';
 
@@ -20,6 +21,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         thumbnail={thumbnail}
         postUrl={postUrl}
         />
+      <Iframely />
       <Post
         post={post}
         pageContext={pageContext}
