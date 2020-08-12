@@ -6,14 +6,17 @@
   li {
     &:first-child {
       text-align: left;
-      @include margin(bottom, 1.5rem);
     }
     &:last-child {
       text-align: right;
+      @include margin(top, 1.5rem);
     }
   }
   span {
     display: block;
+  }
+  &__label {
+    @include margin(bottom, 0.5rem);
   }
 }
 
@@ -22,10 +25,15 @@
     grid-column: 1 / 8;
     grid-row: 7 / 8;
     @include flexbox();
-    @include flex-wrap(wrap);
     @include justify-content(space-between);
-    li:first-child {
-      @include margin(bottom, 0);
+    li {
+      &:first-child {
+        width: 40%;
+      }
+      &:last-child {
+        width: 40%;
+        @include margin(top, 0);
+      }
     }
   }
 }

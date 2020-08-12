@@ -9,7 +9,7 @@ const PrevNext = ({ previous, next }) => {
       <li>
         {previous && (
           <Link to={previous.fields.slug} rel="prev">
-            <span>← {Label.prev}</span>
+            <span className="prev-next__label">← {Label.prev}</span>
             <span>{previous.frontmatter.title}</span>
           </Link>
         )}
@@ -17,7 +17,7 @@ const PrevNext = ({ previous, next }) => {
       <li>
         {next && (
           <Link to={next.fields.slug} rel="next">
-            <span>{Label.next} →</span>
+            <span className="prev-next__label">{Label.next} →</span>
             <span>{next.frontmatter.title}</span>
           </Link>
         )}
