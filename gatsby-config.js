@@ -1,6 +1,5 @@
 require('dotenv').config();
 const config = require('./config/site-config');
-const autoprefixer = require('autoprefixer');
 
 module.exports = {
   siteMetadata: {
@@ -154,7 +153,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        postCssPlugins: [autoprefixer()],
         precision: 8,
         includePaths: ['src/styles', 'node_modules'],
       },
