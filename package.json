@@ -55,7 +55,7 @@
     "typography": "0.16.19"
   },
   "devDependencies": {
-    "prettier": "2.1.2"
+    "prettier": "2.3.0"
   },
   "repository": {
     "type": "git",
