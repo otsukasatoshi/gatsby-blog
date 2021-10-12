@@ -153,7 +153,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        precision: 8
+        implementation: require('node-sass')
       },
     },
     {
