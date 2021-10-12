@@ -153,8 +153,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        precision: 8,
-        includePaths: ['src/styles', 'node_modules'],
+        precision: 8
       },
     },
     {
