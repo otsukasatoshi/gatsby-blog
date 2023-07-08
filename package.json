@@ -49,10 +49,10 @@
     "react-dom": "17.0.2",
     "react-headroom": "3.1.1",
     "react-helmet": "6.1.0",
-    "react-typography": "0.16.19",
+    "react-typography": "0.16.23",
     "typeface-montserrat": "1.1.13",
     "typeface-notosans-jp": "1.0.1",
-    "typography": "0.16.19"
+    "typography": "0.16.24"
   },
   "devDependencies": {
     "prettier": "2.3.0"
