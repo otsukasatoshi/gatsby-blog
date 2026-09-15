@@ -16,7 +16,7 @@
   "dependencies": {
     "autoprefixer": "10.2.4",
     "dotenv": "8.2.0",
-    "gatsby": "3.11.1",
+    "gatsby": "4.25.7",
     "gatsby-image": "3.11.0",
     "gatsby-plugin-canonical-urls": "3.11.0",
     "gatsby-plugin-catch-links": "3.11.0",
